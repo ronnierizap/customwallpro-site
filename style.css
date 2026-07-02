@@ -13,7 +13,7 @@
   --muted:    #888888;
   --border:   #2a2a2a;
 
-  --nav-h:   72px;
+  --nav-h:   124px;
   --max-w:   1200px;
   --pad-x:   clamp(1.25rem, 5vw, 3rem);
   --section: clamp(4rem, 8vw, 7rem);
@@ -141,7 +141,7 @@ p  { font-size: clamp(0.95rem, 1.5vw, 1.05rem); }
   flex-shrink: 0;
 }
 .nav-logo img {
-  height: 66px;
+  height: 99px;
   width: auto;
   display: block;
 }
@@ -152,7 +152,7 @@ p  { font-size: clamp(0.95rem, 1.5vw, 1.05rem); }
 }
 .nav-logo-img {
   display: block;
-  height: 66px;
+  height: 99px;
   width: auto;
 }
 .nav-logo-img--sm {
