@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Get a free quote for custom UV printing — garage doors, walls, murals, and commercial. Custom Wall Pro, Cloverdale BC.">
+  <title>Get a Free Quote | Custom Wall Pro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* ── Quote page: stripped-down above the fold ── */
+    body { background: var(--black); }
+
+    .quote-header {
+      padding: 1.25rem var(--pad-x);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .quote-header .back-link {
+      font-family: var(--font-head);
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: color 0.15s;
+    }
+    .quote-header .back-link:hover { color: var(--gold); }
+
+    .quote-wrap {
+      min-height: calc(100vh - 67px);
+      display: flex;
+      align-items: flex-start;
+      padding-block: clamp(1.5rem, 6vw, 5rem);
+    }
+    .quote-inner {
+      width: 100%;
+      max-width: 560px;
+      margin-inline: auto;
+      padding-inline: var(--pad-x);
+    }
+
+    .quote-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--gold);
+      color: var(--black);
+      font-family: var(--font-head);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.35em 0.9em;
+      margin-bottom: 1.25rem;
+    }
+
+    .quote-inner h1 {
+      font-size: clamp(2rem, 6vw, 3.2rem);
+      margin-bottom: 0.6rem;
+    }
+    .quote-inner .sub {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-bottom: 1.75rem;
+      max-width: 420px;
+    }
+
+    .quote-form {
+      background: var(--black-3);
+      border: 1px solid var(--border);
+      border-top: 3px solid var(--gold);
+      padding: clamp(1.5rem, 4vw, 2.5rem);
+    }
+    .quote-form .btn {
+      width: 100%;
+      text-align: center;
+      padding-block: 1.1em;
+      font-size: 1.05rem;
+      margin-top: 0.5rem;
+    }
+    .quote-form .form-group:last-of-type {
+      margin-bottom: 1.5rem;
+    }
+
+    .call-line {
+      margin-top: 2rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: var(--muted);
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+    }
+    .call-line a { color: var(--gold); font-weight: 600; }
+    .call-line strong {
+      display: block;
+      font-family: var(--font-head);
+      font-size: 1.15rem;
+      color: var(--white);
+      letter-spacing: 0.05em;
+      margin-top: 0.3rem;
+    }
+
+    .trust-points {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      margin-top: 2rem;
+    }
+    .trust-point {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+    .trust-point::before {
+      content: '✓';
+      color: var(--gold);
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── MINIMAL HEADER (no full nav above the fold) ── -->
+<header class="quote-header" role="banner">
+  <a href="index.html" class="nav-logo" aria-label="Custom Wall Pro — Home">
+    <img src="logo.png?v=2" alt="Custom Wall Pro" class="nav-logo-img">
+  </a>
+  <a href="index.html" class="back-link" aria-label="Back to homepage">&#8592; Back to site</a>
+</header>
+
+<!-- ── QUOTE FORM ── -->
+<main class="quote-wrap" id="main-content">
+  <div class="quote-inner">
+
+    <div class="quote-badge">Free &mdash; No Obligation</div>
+    <h1>Get Your<br><span class="text-gold">Free Quote</span></h1>
+    <p class="sub">
+      Tell us about your project. We&rsquo;ll get back to you within one business day.
+      No spam, no pressure &mdash; just a straight answer and a price.
+    </p>
+
+    <form class="quote-form" id="quoteForm" novalidate aria-label="Quote request form">
+      <div class="form-group">
+        <label for="q-name">Your Name <span aria-hidden="true" style="color:var(--gold);">*</span></label>
+        <input type="text" id="q-name" name="name" placeholder="Ron Woodward" required autocomplete="name">
+      </div>
+      <div class="form-group">
+        <label for="q-phone">Phone Number <span aria-hidden="true" style="color:var(--gold);">*</span></label>
+        <input type="tel" id="q-phone" name="phone" placeholder="(250) 486-3409" required autocomplete="tel">
+      </div>
+      <div class="form-group">
+        <label for="q-email">Email Address</label>
+        <input type="email" id="q-email" name="email" placeholder="you@example.com" autocomplete="email">
+      </div>
+      <div class="form-group">
+        <label for="q-type">Project Type <span aria-hidden="true" style="color:var(--gold);">*</span></label>
+        <select id="q-type" name="project_type" required>
+          <option value="" disabled selected>Select a project type&hellip;</option>
+          <option value="garage-door">Garage Door</option>
+          <option value="wall-mural">Wall or Mural</option>
+          <option value="commercial">Commercial / Industrial</option>
+          <option value="other">Other / Not Sure</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="q-details">Project Details</label>
+        <textarea id="q-details" name="details" placeholder="Tell us about your door / wall size, your design idea, your timeline — anything helps." rows="4"></textarea>
+      </div>
+      <button type="submit" class="btn btn-gold">Send My Quote Request</button>
+    </form>
+
+    <div class="call-line">
+      Prefer to call?
+      <a href="tel:+12504863409">
+        <strong>(250) 486-3409</strong>
+      </a>
+      <span style="display:block;margin-top:0.75rem;font-size:0.8rem;">
+        Based in Cloverdale &mdash; serving Surrey &amp; Metro Vancouver
+      </span>
+    </div>
+
+    <ul class="trust-points" aria-label="Why quote with us">
+      <li class="trust-point">No obligation, no hard sell</li>
+      <li class="trust-point">Reply within one business day</li>
+      <li class="trust-point">We come to you &mdash; on-site printing</li>
+      <li class="trust-point">Most jobs done in a single day</li>
+    </ul>
+
+  </div>
+</main>
+
+<!-- ── MINIMAL FOOTER ── -->
+<footer style="border-top:1px solid var(--border);padding:1.25rem var(--pad-x);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:0.75rem;" role="contentinfo">
+  <span style="font-size:0.8rem;color:#555;">Custom Wall Pro &copy; 2026</span>
+  <span class="footer-badge">Surrey &amp; Metro Vancouver</span>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

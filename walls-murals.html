@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Custom UV-printed walls and murals for man caves, feature walls, kids rooms, home gyms, and living rooms. Direct-to-wall printing — no vinyl, no seams. Metro Vancouver.">
+  <title>Walls &amp; Murals UV Printing | Custom Wall Pro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .page-hero {
+      padding-block: clamp(4rem, 9vw, 8rem);
+      background: var(--black);
+      position: relative;
+      overflow: hidden;
+    }
+    .page-hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 4px; height: 100%;
+      background: var(--gold);
+    }
+    .page-hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(
+        -60deg, transparent, transparent 40px,
+        rgba(184,134,11,0.025) 40px, rgba(184,134,11,0.025) 41px
+      );
+      pointer-events: none;
+    }
+    .page-hero .container { position: relative; z-index: 2; }
+
+    .room-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
+    }
+    @media (min-width: 540px) {
+      .room-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (min-width: 900px) {
+      .room-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    .room-card {
+      background: var(--black-3);
+      border: 1px solid var(--border);
+      padding: 1.75rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .room-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 3px;
+      background: var(--gold);
+    }
+    .room-card .room-icon {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      display: block;
+    }
+    .room-card h3 {
+      font-size: 1.15rem;
+      color: var(--white);
+      margin-bottom: 0.5rem;
+    }
+    .room-card p {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .vs-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+    }
+    .vs-table th {
+      font-family: var(--font-head);
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.85em 1em;
+      border-bottom: 2px solid var(--border);
+      text-align: left;
+    }
+    .vs-table th:not(:first-child) { text-align: center; }
+    .vs-table th.winner { color: var(--gold); border-bottom-color: var(--gold); }
+    .vs-table td {
+      padding: 0.85em 1em;
+      border-bottom: 1px solid var(--border);
+      color: var(--text);
+    }
+    .vs-table td:not(:first-child) { text-align: center; }
+    .vs-table tr:last-child td { border-bottom: none; }
+    .vs-table td.yes { color: var(--gold); font-weight: 600; }
+    .vs-table td.no  { color: #555; }
+    .vs-table tr:hover td { background: rgba(255,255,255,0.02); }
+  </style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="Custom Wall Pro — Home">
+      <img src="logo.png?v=2" alt="Custom Wall Pro" class="nav-logo-img">
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="garage-doors.html">Garage Doors</a>
+      <a href="walls-murals.html">Walls &amp; Murals</a>
+      <a href="commercial.html">Commercial</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a href="quote.html" class="btn btn-gold nav-cta">Get a Quote</a>
+  </div>
+</nav>
+<div class="nav-drawer" id="navDrawer" aria-label="Mobile menu">
+  <a href="index.html">Home</a>
+  <a href="garage-doors.html">Garage Doors</a>
+  <a href="walls-murals.html">Walls &amp; Murals</a>
+  <a href="commercial.html">Commercial</a>
+  <a href="contact.html">Contact</a>
+  <a href="quote.html" class="btn btn-gold">Get a Free Quote</a>
+</div>
+
+<!-- ── PAGE HERO ── -->
+<section class="page-hero" aria-labelledby="page-heading">
+  <div class="container">
+    <span class="eyebrow">Residential UV Printing</span>
+    <h1 id="page-heading">Walls &amp; Murals<br>That <span class="text-gold">Mean Something</span></h1>
+    <p class="hero-sub" style="margin-top:1.25rem;max-width:580px;">
+      Photo-realistic UV printing direct to your wall. No vinyl, no seams, no peeling.
+      From man cave showpieces to kids&rsquo; room wonders &mdash; permanent, stunning, done in a day.
+    </p>
+    <div style="margin-top:2.5rem;display:flex;flex-wrap:wrap;gap:1rem;">
+      <a href="quote.html" class="btn btn-gold btn-lg">Get a Free Quote</a>
+      <a href="#comparison" class="btn btn-outline btn-lg">UV vs Vinyl</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── ROOM TYPES ── -->
+<section class="section bg-dark" aria-labelledby="rooms-heading">
+  <div class="container">
+    <span class="eyebrow">Where We Print</span>
+    <h2 id="rooms-heading" style="margin-bottom:0.75rem;">Every Room. Any Design.</h2>
+    <p style="color:var(--muted);margin-bottom:2.5rem;max-width:520px;">
+      Any interior wall is a canvas. We print on drywall, concrete, wood paneling,
+      and most painted surfaces.
+    </p>
+    <div class="room-grid" role="list">
+      <div class="room-card" role="listitem">
+        <span class="room-icon" aria-hidden="true">&#127918;</span>
+        <h3>Man Caves</h3>
+        <p>Your team colours, your car, your rules. Floor-to-ceiling murals that make the space yours.</p>
+      </div>
+      <div class="room-card" role="listitem">
+        <span class="room-icon" aria-hidden="true">&#9733;</span>
+        <h3>Feature Walls</h3>
+        <p>Create a living room centrepiece. Abstract art, landscape photography, or bold geometric prints.</p>
+      </div>
+      <div class="room-card" role="listitem">
+        <span class="room-icon" aria-hidden="true">&#127774;</span>
+        <h3>Kids&rsquo; Rooms</h3>
+        <p>Dinosaurs, space, ocean depths, superheroes &mdash; print a world your kids can grow up inside.</p>
+      </div>
+      <div class="room-card" role="listitem">
+        <span class="room-icon" aria-hidden="true">&#127947;</span>
+        <h3>Home Gyms</h3>
+        <p>Motivational prints, stadium murals, or abstract energy. Make every set feel like a statement.</p>
+      </div>
+      <div class="room-card" role="listitem">
+        <span class="room-icon" aria-hidden="true">&#127968;</span>
+        <h3>Living Rooms</h3>
+        <p>Bespoke art at scale. Commission something unique or bring a beloved photo to life, wall-sized.</p>
+      </div>
+      <div class="room-card" role="listitem">
+        <span class="room-icon" aria-hidden="true">&#128084;</span>
+        <h3>Any Space</h3>
+        <p>Hallways, stairwells, basements, garages. If there&rsquo;s a wall, we can print on it.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FEATURE SECTION ── -->
+<section class="section bg-black" aria-labelledby="how-heading">
+  <div class="container">
+    <div class="two-col reverse">
+      <div>
+        <span class="eyebrow">Direct-to-Wall Technology</span>
+        <h2 id="how-heading">No Wrap.<br>No Liner.<br><span class="text-gold">Just Ink.</span></h2>
+        <div class="gold-rule"></div>
+        <p style="margin-bottom:1.5rem;">
+          Traditional wallpaper and vinyl wraps are installed on top of your surface &mdash;
+          which means seams, bubbles, and an eventual peel. Our UV flatbed printer
+          bonds ink directly into the wall surface at a molecular level.
+          The result is seamless, vibrant, and permanent.
+        </p>
+        <div class="feature-list" role="list">
+          <div class="feature-item" role="listitem">
+            <div class="feature-icon" aria-hidden="true">&#9670;</div>
+            <div class="feature-text">
+              <h4>Photo-Realistic Resolution</h4>
+              <p>Millions of colours, razor-sharp detail. We print at gallery-quality resolution across any wall size.</p>
+            </div>
+          </div>
+          <div class="feature-item" role="listitem">
+            <div class="feature-icon" aria-hidden="true">&#9670;</div>
+            <div class="feature-text">
+              <h4>Works on Textured Surfaces</h4>
+              <p>Drywall with orange peel texture? Wood grain panelling? Most interior surfaces are printable.</p>
+            </div>
+          </div>
+          <div class="feature-item" role="listitem">
+            <div class="feature-icon" aria-hidden="true">&#9670;</div>
+            <div class="feature-text">
+              <h4>No Adhesive, No Residue</h4>
+              <p>If you ever repaint, you&rsquo;re painting over ink &mdash; not removing layers of sticky backing.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="two-col-img">
+        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=800&q=80" alt="Modern interior room with dramatic feature wall mural" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── COMPARISON TABLE ── -->
+<section class="section bg-dark-2" id="comparison" aria-labelledby="compare-heading">
+  <div class="container">
+    <span class="eyebrow">Why UV?</span>
+    <h2 id="compare-heading" style="margin-bottom:0.5rem;">UV Printing vs the Alternatives</h2>
+    <p style="color:var(--muted);margin-bottom:2.5rem;max-width:520px;">
+      Before you choose vinyl or wallpaper, here&rsquo;s how the options stack up.
+    </p>
+    <div style="overflow-x:auto;">
+      <table class="vs-table" aria-label="Comparison of UV printing vs vinyl vs wallpaper">
+        <thead>
+          <tr>
+            <th>Feature</th>
+            <th class="winner">UV Printing</th>
+            <th>Vinyl Wrap</th>
+            <th>Wallpaper</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Seamless finish</td>
+            <td class="yes">&#10003; Yes</td>
+            <td class="no">&#10005; Seams visible</td>
+            <td class="no">&#10005; Seams visible</td>
+          </tr>
+          <tr>
+            <td>Photo-realistic quality</td>
+            <td class="yes">&#10003; Yes</td>
+            <td class="no">Limited</td>
+            <td class="no">Limited</td>
+          </tr>
+          <tr>
+            <td>Works on textured surfaces</td>
+            <td class="yes">&#10003; Yes</td>
+            <td class="no">&#10005; No</td>
+            <td class="no">&#10005; No</td>
+          </tr>
+          <tr>
+            <td>Won&rsquo;t peel or bubble</td>
+            <td class="yes">&#10003; Yes</td>
+            <td class="no">Peels over time</td>
+            <td class="no">Peels with moisture</td>
+          </tr>
+          <tr>
+            <td>No adhesive residue</td>
+            <td class="yes">&#10003; Yes</td>
+            <td class="no">&#10005; Leaves residue</td>
+            <td class="no">&#10005; Leaves residue</td>
+          </tr>
+          <tr>
+            <td>Done in a day</td>
+            <td class="yes">&#10003; Yes</td>
+            <td class="no">Multi-day</td>
+            <td class="no">Multi-day</td>
+          </tr>
+          <tr>
+            <td>True custom design</td>
+            <td class="yes">&#10003; Unlimited</td>
+            <td class="no">Limited</td>
+            <td class="no">Limited</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA ── -->
+<section class="callout-strip" aria-label="Call to action">
+  <div class="container">
+    <h2>Transform a Wall. Own the Room.</h2>
+    <p>Free quotes. Custom design help available. Metro Vancouver.</p>
+    <a href="quote.html" class="btn btn-white btn-lg">Get a Free Quote</a>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo" aria-label="Custom Wall Pro">
+          <img src="logo.png?v=2" alt="Custom Wall Pro" class="nav-logo-img nav-logo-img--sm">
+        </a>
+        <p>Direct-to-surface UV printing for garage doors, walls, and commercial spaces. Based in Cloverdale, BC.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="garage-doors.html">Garage Doors</a></li>
+          <li><a href="walls-murals.html">Walls &amp; Murals</a></li>
+          <li><a href="commercial.html">Commercial</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="quote.html">Get a Quote</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>Custom Wall Pro &copy; 2026</span>
+      <span class="footer-badge">Surrey &amp; Metro Vancouver</span>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

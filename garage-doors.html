@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Custom UV-printed garage door graphics. Any design on metal, wood, or fibreglass. Done in a day. Serving Metro Vancouver from Cloverdale, BC.">
+  <title>Garage Door UV Printing | Custom Wall Pro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .page-hero {
+      padding-block: clamp(4rem, 9vw, 8rem);
+      background: var(--black);
+      position: relative;
+      overflow: hidden;
+    }
+    .page-hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 4px; height: 100%;
+      background: var(--gold);
+    }
+    .page-hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(
+        -60deg, transparent, transparent 40px,
+        rgba(184,134,11,0.025) 40px, rgba(184,134,11,0.025) 41px
+      );
+      pointer-events: none;
+    }
+    .page-hero .container { position: relative; z-index: 2; }
+    .page-hero .hero-sub { max-width: 560px; }
+
+    .surface-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1.25rem;
+    }
+    .surface-chip {
+      font-family: var(--font-head);
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.35em 0.85em;
+      border: 1px solid var(--gold);
+      color: var(--gold);
+    }
+
+    .big-stat {
+      font-family: var(--font-head);
+      font-size: clamp(3rem, 8vw, 5.5rem);
+      font-weight: 700;
+      color: var(--gold);
+      line-height: 1;
+      display: block;
+    }
+    .stat-label {
+      font-family: var(--font-head);
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-top: 0.3rem;
+      display: block;
+    }
+    .stats-row {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+      padding-block: 2.5rem;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    @media (min-width: 600px) {
+      .stats-row { grid-template-columns: repeat(4, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="Custom Wall Pro — Home">
+      <img src="logo.png?v=2" alt="Custom Wall Pro" class="nav-logo-img">
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="garage-doors.html">Garage Doors</a>
+      <a href="walls-murals.html">Walls &amp; Murals</a>
+      <a href="commercial.html">Commercial</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a href="quote.html" class="btn btn-gold nav-cta">Get a Quote</a>
+  </div>
+</nav>
+<div class="nav-drawer" id="navDrawer" aria-label="Mobile menu">
+  <a href="index.html">Home</a>
+  <a href="garage-doors.html">Garage Doors</a>
+  <a href="walls-murals.html">Walls &amp; Murals</a>
+  <a href="commercial.html">Commercial</a>
+  <a href="contact.html">Contact</a>
+  <a href="quote.html" class="btn btn-gold">Get a Free Quote</a>
+</div>
+
+<!-- ── PAGE HERO ── -->
+<section class="page-hero" aria-labelledby="page-heading">
+  <div class="container">
+    <span class="eyebrow">Primary Service</span>
+    <h1 id="page-heading">Garage Door<br><span class="text-gold">UV Printing</span></h1>
+    <p class="hero-sub" style="margin-top:1.25rem;">
+      Any design. Any style. Printed directly onto your door &mdash; cars, murals, nature scenes,
+      sports, custom artwork. Permanent, weatherproof, and done in a single day.
+    </p>
+    <div class="surface-chips" aria-label="Supported door materials">
+      <span class="surface-chip">Metal Doors</span>
+      <span class="surface-chip">Wood Doors</span>
+      <span class="surface-chip">Fibreglass Doors</span>
+    </div>
+    <div style="margin-top:2.5rem;">
+      <a href="quote.html" class="btn btn-gold btn-lg">Get a Free Quote</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── STATS ── -->
+<div class="bg-dark-2">
+  <div class="container">
+    <div class="stats-row">
+      <div>
+        <span class="big-stat">1</span>
+        <span class="stat-label">Day turnaround</span>
+      </div>
+      <div>
+        <span class="big-stat">&#8734;</span>
+        <span class="stat-label">Design options</span>
+      </div>
+      <div>
+        <span class="big-stat">3</span>
+        <span class="stat-label">Surface types</span>
+      </div>
+      <div>
+        <span class="big-stat">YVR</span>
+        <span class="stat-label">Metro Vancouver</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── FEATURES ── -->
+<section class="section bg-dark" aria-labelledby="features-heading">
+  <div class="container">
+    <div class="two-col">
+      <div>
+        <span class="eyebrow">Why UV Printing</span>
+        <h2 id="features-heading">Built to Last,<br>Made to <span class="text-gold">Impress</span></h2>
+        <div class="gold-rule"></div>
+        <div class="feature-list" role="list">
+          <div class="feature-item" role="listitem">
+            <div class="feature-icon" aria-hidden="true">&#9670;</div>
+            <div class="feature-text">
+              <h4>Any Design You Can Imagine</h4>
+              <p>Classic cars, family crests, murals, team logos, BC landscapes, abstract art &mdash;
+                if you can picture it, we can print it. Bring your own file or we&rsquo;ll help you design.</p>
+            </div>
+          </div>
+          <div class="feature-item" role="listitem">
+            <div class="feature-icon" aria-hidden="true">&#9670;</div>
+            <div class="feature-text">
+              <h4>Works on Metal, Wood &amp; Fibreglass</h4>
+              <p>UV ink bonds directly to the surface &mdash; no adhesive, no peeling edge, no bubbles.
+                Works on single, double, and carriage-style doors.</p>
+            </div>
+          </div>
+          <div class="feature-item" role="listitem">
+            <div class="feature-icon" aria-hidden="true">&#9670;</div>
+            <div class="feature-text">
+              <h4>Stands Up to BC Winters</h4>
+              <p>UV-cured ink is moisture-resistant, UV-stable, and freeze-thaw rated.
+                Rain, frost, and direct sun won&rsquo;t fade or crack it.</p>
+            </div>
+          </div>
+          <div class="feature-item" role="listitem">
+            <div class="feature-icon" aria-hidden="true">&#9670;</div>
+            <div class="feature-text">
+              <h4>Done in a Day &mdash; We Come to You</h4>
+              <p>On-site printing in your driveway. Most jobs are complete within a few hours.
+                No teardown, no shop drop-off, no waiting weeks.</p>
+            </div>
+          </div>
+          <div class="feature-item" role="listitem">
+            <div class="feature-icon" aria-hidden="true">&#9670;</div>
+            <div class="feature-text">
+              <h4>Local &mdash; Based in Cloverdale</h4>
+              <p>We serve Surrey, Langley, Burnaby, Richmond, Coquitlam, and all of Metro Vancouver.
+                No out-of-town markups, no middlemen.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="two-col-img">
+        <img src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?auto=format&fit=crop&w=800&q=80" alt="Sleek sports car — example of a custom garage door print design" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── GALLERY ── -->
+<section class="section--sm bg-black" aria-labelledby="gallery-heading">
+  <div class="container">
+    <span class="eyebrow">Our Work</span>
+    <h2 id="gallery-heading" style="margin-bottom:0.75rem;">Garage Door Gallery</h2>
+    <p style="color:var(--muted);margin-bottom:2.5rem;max-width:500px;">
+      Photos coming soon &mdash; every job is unique. <a href="quote.html" style="color:var(--gold);">Request your custom quote</a> and let&rsquo;s talk design.
+    </p>
+    <div class="gallery-grid" role="list" aria-label="Garage door print gallery">
+      <div class="gallery-item" role="listitem">
+        <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=600&q=80" alt="Red Porsche 911 — custom car mural design" loading="lazy">
+      </div>
+      <div class="gallery-item" role="listitem">
+        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=600&q=80" alt="Bow Lake, Canadian Rockies — BC mountain scene print" loading="lazy">
+      </div>
+      <div class="gallery-item" role="listitem">
+        <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=600&q=80" alt="Sports and fitness themed mural design" loading="lazy">
+      </div>
+      <div class="gallery-item" role="listitem">
+        <img src="https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&w=600&q=80" alt="Vibrant abstract colourful art print" loading="lazy">
+      </div>
+      <div class="gallery-item" role="listitem">
+        <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=600&q=80" alt="BC old-growth forest — nature landscape design" loading="lazy">
+      </div>
+      <div class="gallery-item" role="listitem">
+        <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=600&q=80" alt="Vintage road trip scene — classic truck and highway design" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── HOW IT WORKS ── -->
+<section class="section bg-dark-2" aria-labelledby="process-heading">
+  <div class="container">
+    <div class="two-col">
+      <div>
+        <span class="eyebrow">The Process</span>
+        <h2 id="process-heading">How It Works</h2>
+        <div class="gold-rule"></div>
+        <div class="steps" role="list">
+          <div class="step" role="listitem">
+            <div class="step-num" aria-hidden="true">01</div>
+            <div class="step-body">
+              <h4>Send Us Your Design</h4>
+              <p>Got a file ready? Send it over. Starting from scratch? Our team can help you
+                build something from a reference image, a sketch, or an idea in your head.</p>
+            </div>
+          </div>
+          <div class="step" role="listitem">
+            <div class="step-num" aria-hidden="true">02</div>
+            <div class="step-body">
+              <h4>We Come to You</h4>
+              <p>Our UV printer comes to your driveway. No drop-off, no arrangements with a shop.
+                We set up on-site and print directly onto your door.</p>
+            </div>
+          </div>
+          <div class="step" role="listitem">
+            <div class="step-num" aria-hidden="true">03</div>
+            <div class="step-body">
+              <h4>Done in a Day</h4>
+              <p>UV ink cures instantly under the lamp. Most jobs are finished in a few hours.
+                Drive out the same day with a door that turns heads.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:1rem;">
+        <div style="background:var(--black);border:1px solid var(--border);border-left:3px solid var(--gold);padding:1.5rem;">
+          <h4 style="color:var(--gold);font-family:var(--font-head);font-size:0.8rem;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:0.5rem;">What to Bring</h4>
+          <p style="font-size:0.9rem;color:var(--text);">Your design file (any format), or just your idea &mdash; we&rsquo;ll handle the rest. High-resolution images print best; we&rsquo;ll advise if a file needs adjusting.</p>
+        </div>
+        <div style="background:var(--black);border:1px solid var(--border);border-left:3px solid var(--gold);padding:1.5rem;">
+          <h4 style="color:var(--gold);font-family:var(--font-head);font-size:0.8rem;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:0.5rem;">Prep Required</h4>
+          <p style="font-size:0.9rem;color:var(--text);">Your door should be reasonably clean &mdash; no heavy dirt or rust. We&rsquo;ll do a quick surface wipe before printing. Most doors are ready as-is.</p>
+        </div>
+        <div style="background:var(--black);border:1px solid var(--border);border-left:3px solid var(--gold);padding:1.5rem;">
+          <h4 style="color:var(--gold);font-family:var(--font-head);font-size:0.8rem;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:0.5rem;">After the Job</h4>
+          <p style="font-size:0.9rem;color:var(--text);">UV ink is fully cured when we leave &mdash; no waiting period. The door is ready to open, close, and use immediately. Maintenance is just normal washing.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA ── -->
+<section class="callout-strip" aria-label="Call to action">
+  <div class="container">
+    <h2>Your Garage Door Is a Canvas.</h2>
+    <p>Free quotes. Local crew. Done in a day.</p>
+    <a href="quote.html" class="btn btn-white btn-lg">Get a Free Quote</a>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo" aria-label="Custom Wall Pro">
+          <img src="logo.png?v=2" alt="Custom Wall Pro" class="nav-logo-img nav-logo-img--sm">
+        </a>
+        <p>Direct-to-surface UV printing for garage doors, walls, and commercial spaces. Based in Cloverdale, BC.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="garage-doors.html">Garage Doors</a></li>
+          <li><a href="walls-murals.html">Walls &amp; Murals</a></li>
+          <li><a href="commercial.html">Commercial</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="quote.html">Get a Quote</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>Custom Wall Pro &copy; 2026</span>
+      <span class="footer-badge">Surrey &amp; Metro Vancouver</span>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

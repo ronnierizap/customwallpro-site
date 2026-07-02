@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Custom Wall Pro — UV printing for garage doors, walls, and commercial spaces. Based in Cloverdale, serving Surrey and Metro Vancouver.">
+  <title>Contact | Custom Wall Pro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .page-hero {
+      padding-block: clamp(3.5rem, 7vw, 6rem);
+      background: var(--black);
+      position: relative;
+      overflow: hidden;
+    }
+    .page-hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 4px; height: 100%;
+      background: var(--gold);
+    }
+    .page-hero .container { position: relative; z-index: 2; }
+
+    .contact-grid {
+      display: grid;
+      gap: clamp(2.5rem, 5vw, 4rem);
+      align-items: start;
+    }
+    @media (min-width: 768px) {
+      .contact-grid { grid-template-columns: 1fr 1.4fr; }
+    }
+
+    .contact-info { display: flex; flex-direction: column; gap: 2rem; }
+    .info-block {}
+    .info-block h4 {
+      font-family: var(--font-head);
+      font-size: 0.75rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.6rem;
+      font-weight: 600;
+    }
+    .info-block p, .info-block a {
+      color: var(--text);
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+    .info-block a { color: var(--gold); transition: color 0.15s; }
+    .info-block a:hover { color: var(--gold-l); }
+    .info-block .big-phone {
+      font-family: var(--font-head);
+      font-size: clamp(1.5rem, 4vw, 2rem);
+      color: var(--white);
+      letter-spacing: 0.02em;
+    }
+
+    .area-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+    }
+    .area-chip {
+      font-family: var(--font-head);
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.3em 0.75em;
+      border: 1px solid var(--border);
+      color: var(--muted);
+    }
+
+    .contact-form-wrap {
+      background: var(--black-3);
+      border: 1px solid var(--border);
+      border-top: 3px solid var(--gold);
+      padding: clamp(1.75rem, 4vw, 2.5rem);
+    }
+    .contact-form-wrap h3 {
+      font-size: 1.3rem;
+      color: var(--white);
+      margin-bottom: 1.75rem;
+    }
+    .contact-form-wrap .btn {
+      width: 100%;
+      text-align: center;
+      padding-block: 1em;
+    }
+
+    .hours-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.6em 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.9rem;
+    }
+    .hours-row:last-child { border-bottom: none; }
+    .hours-row .day { color: var(--muted); }
+    .hours-row .time { color: var(--text); font-weight: 500; }
+  </style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="Custom Wall Pro — Home">
+      <img src="logo.png?v=2" alt="Custom Wall Pro" class="nav-logo-img">
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="garage-doors.html">Garage Doors</a>
+      <a href="walls-murals.html">Walls &amp; Murals</a>
+      <a href="commercial.html">Commercial</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a href="quote.html" class="btn btn-gold nav-cta">Get a Quote</a>
+  </div>
+</nav>
+<div class="nav-drawer" id="navDrawer" aria-label="Mobile menu">
+  <a href="index.html">Home</a>
+  <a href="garage-doors.html">Garage Doors</a>
+  <a href="walls-murals.html">Walls &amp; Murals</a>
+  <a href="commercial.html">Commercial</a>
+  <a href="contact.html">Contact</a>
+  <a href="quote.html" class="btn btn-gold">Get a Free Quote</a>
+</div>
+
+<!-- ── PAGE HERO ── -->
+<section class="page-hero" aria-labelledby="page-heading">
+  <div class="container">
+    <span class="eyebrow">Get in Touch</span>
+    <h1 id="page-heading">Contact <span class="text-gold">Us</span></h1>
+    <p class="hero-sub" style="margin-top:1rem;max-width:480px;">
+      Questions, quotes, or just want to talk through an idea?
+      We&rsquo;re based in Cloverdale and serve all of Metro Vancouver. Reach out any time.
+    </p>
+  </div>
+</section>
+
+<!-- ── CONTACT SECTION ── -->
+<section class="section bg-dark" aria-labelledby="contact-section-heading">
+  <div class="container">
+    <h2 id="contact-section-heading" class="sr-only">Contact Information and Form</h2>
+    <div class="contact-grid">
+
+      <!-- INFO COLUMN -->
+      <div class="contact-info">
+
+        <div class="info-block">
+          <h4>Phone</h4>
+          <a href="tel:+12504863409" class="big-phone">(250) 486-3409</a>
+          <p style="margin-top:0.4rem;font-size:0.85rem;color:var(--muted);">Call or text anytime during business hours</p>
+        </div>
+
+        <div class="info-block">
+          <h4>Email</h4>
+          <a href="mailto:customwallpro@gmail.com">customwallpro@gmail.com</a>
+          <p style="margin-top:0.3rem;font-size:0.85rem;color:var(--muted);">We reply within one business day</p>
+        </div>
+
+        <div class="info-block">
+          <h4>Based In</h4>
+          <p>Cloverdale, Surrey, BC<br>Metro Vancouver</p>
+        </div>
+
+        <div class="info-block">
+          <h4>Service Area</h4>
+          <div class="area-chips" role="list" aria-label="Areas we serve">
+            <span class="area-chip" role="listitem">Surrey</span>
+            <span class="area-chip" role="listitem">Langley</span>
+            <span class="area-chip" role="listitem">Burnaby</span>
+            <span class="area-chip" role="listitem">Richmond</span>
+            <span class="area-chip" role="listitem">Coquitlam</span>
+            <span class="area-chip" role="listitem">Maple Ridge</span>
+            <span class="area-chip" role="listitem">Abbotsford</span>
+            <span class="area-chip" role="listitem">Metro Vancouver</span>
+          </div>
+          <p style="margin-top:0.75rem;font-size:0.85rem;color:var(--muted);">
+            Outside Metro Vancouver? Ask us &mdash; we may be able to travel for commercial jobs.
+          </p>
+        </div>
+
+        <div class="info-block">
+          <h4>Hours</h4>
+          <div>
+            <div class="hours-row">
+              <span class="day">Monday &ndash; Friday</span>
+              <span class="time">8am &ndash; 6pm</span>
+            </div>
+            <div class="hours-row">
+              <span class="day">Saturday</span>
+              <span class="time">9am &ndash; 4pm</span>
+            </div>
+            <div class="hours-row">
+              <span class="day">Sunday</span>
+              <span class="time">By appointment</span>
+            </div>
+          </div>
+        </div>
+
+        <div style="background:var(--black);border:1px solid var(--border);border-left:3px solid var(--gold);padding:1.25rem;">
+          <p style="font-size:0.9rem;color:var(--text);">
+            <strong style="color:var(--gold);font-family:var(--font-head);font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;display:block;margin-bottom:0.4rem;">Need a Quote?</strong>
+            For the fastest response, use our <a href="quote.html" style="color:var(--gold);">quote form &rarr;</a>
+            It gives us everything we need to get you a number quickly.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- FORM COLUMN -->
+      <div class="contact-form-wrap">
+        <h3>Send Us a Message</h3>
+        <form id="contactForm" novalidate aria-label="Contact form">
+          <div class="form-group">
+            <label for="c-name">Your Name <span aria-hidden="true" style="color:var(--gold);">*</span></label>
+            <input type="text" id="c-name" name="name" placeholder="Ron Woodward" required autocomplete="name">
+          </div>
+          <div class="form-group">
+            <label for="c-phone">Phone</label>
+            <input type="tel" id="c-phone" name="phone" placeholder="(250) 486-3409" autocomplete="tel">
+          </div>
+          <div class="form-group">
+            <label for="c-email">Email <span aria-hidden="true" style="color:var(--gold);">*</span></label>
+            <input type="email" id="c-email" name="email" placeholder="you@example.com" required autocomplete="email">
+          </div>
+          <div class="form-group">
+            <label for="c-subject">Subject</label>
+            <select id="c-subject" name="subject">
+              <option value="" disabled selected>What&rsquo;s this about?</option>
+              <option value="quote">Requesting a Quote</option>
+              <option value="garage-door">Garage Door Printing</option>
+              <option value="wall-mural">Wall or Mural</option>
+              <option value="commercial">Commercial Project</option>
+              <option value="general">General Question</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="c-message">Message <span aria-hidden="true" style="color:var(--gold);">*</span></label>
+            <textarea id="c-message" name="message" placeholder="Tell us what you&rsquo;re thinking&hellip;" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-gold">Send Message</button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo" aria-label="Custom Wall Pro">
+          <img src="logo.png?v=2" alt="Custom Wall Pro" class="nav-logo-img nav-logo-img--sm">
+        </a>
+        <p>Direct-to-surface UV printing for garage doors, walls, and commercial spaces. Based in Cloverdale, BC.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="garage-doors.html">Garage Doors</a></li>
+          <li><a href="walls-murals.html">Walls &amp; Murals</a></li>
+          <li><a href="commercial.html">Commercial</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="quote.html">Get a Quote</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>Custom Wall Pro &copy; 2026</span>
+      <span class="footer-badge">Surrey &amp; Metro Vancouver</span>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

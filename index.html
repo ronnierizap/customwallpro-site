@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Custom Wall Pro — Direct-to-surface UV printing for garage doors, walls, and commercial spaces. Based in Cloverdale, serving Metro Vancouver.">
+  <title>Custom Wall Pro | UV Printing — Garage Doors, Walls & Commercial</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* ── HOME HERO ── */
+    .home-hero {
+      background: var(--black);
+      padding-block: clamp(5rem, 11vw, 9rem);
+      position: relative;
+      overflow: hidden;
+    }
+    .home-hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 4px; height: 100%;
+      background: var(--gold);
+    }
+    .home-hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        repeating-linear-gradient(
+          -60deg,
+          transparent,
+          transparent 40px,
+          rgba(184,134,11,0.025) 40px,
+          rgba(184,134,11,0.025) 41px
+        );
+      pointer-events: none;
+    }
+    .home-hero .container { position: relative; z-index: 2; }
+    .home-hero h1 { max-width: 820px; }
+    .home-hero .hero-actions { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 2.5rem; }
+
+    /* ── GALLERY STRIP ── */
+    .gallery-strip {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.5rem;
+      margin-top: 3rem;
+    }
+    @media (min-width: 480px) {
+      .gallery-strip { grid-template-columns: repeat(3, 1fr); }
+    }
+    .gallery-strip img {
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* ── SERVICE TEASERS ── */
+    .teasers {
+      display: grid;
+      gap: 1.5rem;
+    }
+    @media (min-width: 768px) {
+      .teasers { grid-template-columns: 1fr 1fr; }
+    }
+    .teaser-card .arrow-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: var(--font-head);
+      font-size: 0.85rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 600;
+      transition: gap 0.15s;
+    }
+    .teaser-card .arrow-link:hover { gap: 0.8rem; }
+    .teaser-tag {
+      font-family: var(--font-head);
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.75rem;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="Custom Wall Pro — Home">
+      <img src="logo.png?v=2" alt="Custom Wall Pro" class="nav-logo-img">
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="garage-doors.html">Garage Doors</a>
+      <a href="walls-murals.html">Walls &amp; Murals</a>
+      <a href="commercial.html">Commercial</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a href="quote.html" class="btn btn-gold nav-cta">Get a Quote</a>
+  </div>
+</nav>
+<div class="nav-drawer" id="navDrawer" aria-label="Mobile menu">
+  <a href="index.html">Home</a>
+  <a href="garage-doors.html">Garage Doors</a>
+  <a href="walls-murals.html">Walls &amp; Murals</a>
+  <a href="commercial.html">Commercial</a>
+  <a href="contact.html">Contact</a>
+  <a href="quote.html" class="btn btn-gold">Get a Free Quote</a>
+</div>
+
+<!-- ── HERO ── -->
+<section class="home-hero" aria-labelledby="hero-heading">
+  <div class="container">
+    <div style="margin-bottom:2.5rem;">
+      <img src="logo.png?v=2" alt="Custom Wall Pro" style="height:clamp(60px,8vw,96px);width:auto;display:block;">
+    </div>
+    <div class="hero-badge">Cloverdale, BC — UV Printing</div>
+    <h1 id="hero-heading">
+      Turn Your Garage Door<br>
+      Into a <span class="text-gold">Statement.</span>
+    </h1>
+    <p class="hero-sub">
+      Custom UV-printed graphics, direct to your door &mdash; any design, done in a day.
+      No wrap. No vinyl. Permanent ink bonded straight to the surface.
+    </p>
+    <div class="hero-actions">
+      <a href="quote.html" class="btn btn-gold btn-lg">Get a Free Quote</a>
+      <a href="garage-doors.html" class="btn btn-outline btn-lg">See How It Works</a>
+    </div>
+
+    <!-- Garage door preview strip -->
+    <div class="gallery-strip" aria-label="Example garage door print designs">
+      <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=600&q=80" alt="Classic red Porsche 911 — popular garage door print design">
+      <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=600&q=80" alt="Snow-capped Canadian Rockies mountain lake — BC landscape print design" loading="lazy">
+      <img src="https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&w=600&q=80" alt="Vibrant abstract colourful paint art — custom abstract design" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- ── TRUST BAR ── -->
+<div style="background:var(--black-3);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
+  <div class="container" style="padding-block:1.25rem;">
+    <ul style="display:flex;flex-wrap:wrap;gap:1.5rem 3rem;align-items:center;justify-content:center;">
+      <li style="display:flex;align-items:center;gap:0.5rem;font-family:var(--font-head);font-size:0.8rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);">
+        <span style="color:var(--gold);font-size:1rem;">&#10003;</span> Done in a Day
+      </li>
+      <li style="display:flex;align-items:center;gap:0.5rem;font-family:var(--font-head);font-size:0.8rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);">
+        <span style="color:var(--gold);font-size:1rem;">&#10003;</span> Any Design
+      </li>
+      <li style="display:flex;align-items:center;gap:0.5rem;font-family:var(--font-head);font-size:0.8rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);">
+        <span style="color:var(--gold);font-size:1rem;">&#10003;</span> UV-Cured &amp; Weatherproof
+      </li>
+      <li style="display:flex;align-items:center;gap:0.5rem;font-family:var(--font-head);font-size:0.8rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);">
+        <span style="color:var(--gold);font-size:1rem;">&#10003;</span> Metro Vancouver
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-- ── SERVICE TEASERS ── -->
+<section class="section bg-dark" aria-labelledby="teasers-heading">
+  <div class="container">
+    <span class="eyebrow">What We Do</span>
+    <h2 id="teasers-heading" style="margin-bottom:2.5rem;">More Than Garage Doors</h2>
+    <div class="teasers">
+
+      <div class="teaser-card">
+        <span class="teaser-tag">Residential</span>
+        <h3>Walls &amp; Murals</h3>
+        <div class="gold-rule"></div>
+        <p>
+          Man caves, feature walls, kids&rsquo; rooms, home gyms, living rooms.
+          Photo-realistic UV printing direct to your wall &mdash; no seams, no peeling, no compromise.
+        </p>
+        <a href="walls-murals.html" class="arrow-link">See Wall Designs &rarr;</a>
+      </div>
+
+      <div class="teaser-card">
+        <span class="teaser-tag">Industrial &amp; Commercial</span>
+        <h3>Commercial &amp; Facilities</h3>
+        <div class="gold-rule"></div>
+        <p>
+          Safety graphics, wayfinding, branded installations, and large-format murals built for
+          working environments &mdash; mining, mills, corporate offices, and more.
+        </p>
+        <a href="commercial.html" class="arrow-link">Commercial Inquiries &rarr;</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER CTA ── -->
+<section class="callout-strip" aria-label="Call to action">
+  <div class="container">
+    <h2>Ready to Make Your Mark?</h2>
+    <p>Free quotes. Fast turnaround. Based in Cloverdale &mdash; serving Metro Vancouver.</p>
+    <a href="quote.html" class="btn btn-white btn-lg">Get a Free Quote</a>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo" aria-label="Custom Wall Pro">
+          <img src="logo.png?v=2" alt="Custom Wall Pro" class="nav-logo-img nav-logo-img--sm">
+        </a>
+        <p>Direct-to-surface UV printing for garage doors, walls, and commercial spaces. Based in Cloverdale, BC.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="garage-doors.html">Garage Doors</a></li>
+          <li><a href="walls-murals.html">Walls &amp; Murals</a></li>
+          <li><a href="commercial.html">Commercial</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="quote.html">Get a Quote</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>Custom Wall Pro &copy; 2026</span>
+      <span class="footer-badge">Surrey &amp; Metro Vancouver</span>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

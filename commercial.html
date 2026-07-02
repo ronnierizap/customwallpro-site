@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Commercial and industrial UV printing — safety graphics, wayfinding, large-format murals, and branded installations for mining, mills, and corporate facilities. Metro Vancouver.">
+  <title>Commercial &amp; Industrial UV Printing | Custom Wall Pro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .page-hero {
+      padding-block: clamp(4rem, 9vw, 8rem);
+      background: var(--black);
+      position: relative;
+      overflow: hidden;
+    }
+    .page-hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 4px; height: 100%;
+      background: var(--gold);
+    }
+    .page-hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(
+        -60deg, transparent, transparent 40px,
+        rgba(184,134,11,0.025) 40px, rgba(184,134,11,0.025) 41px
+      );
+      pointer-events: none;
+    }
+    .page-hero .container { position: relative; z-index: 2; }
+
+    .industry-grid {
+      display: grid;
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+    }
+    @media (min-width: 600px) {
+      .industry-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (min-width: 900px) {
+      .industry-grid { grid-template-columns: repeat(4, 1fr); }
+    }
+    .industry-cell {
+      background: var(--black-3);
+      padding: 2rem 1.5rem;
+      text-align: center;
+    }
+    .industry-cell .ind-icon {
+      font-size: 2.5rem;
+      display: block;
+      margin-bottom: 0.75rem;
+    }
+    .industry-cell h4 {
+      color: var(--white);
+      font-size: 1rem;
+      margin-bottom: 0.4rem;
+    }
+    .industry-cell p {
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    .service-list {
+      display: grid;
+      gap: 1.5rem;
+    }
+    @media (min-width: 680px) {
+      .service-list { grid-template-columns: repeat(2, 1fr); }
+    }
+    .service-block {
+      border-left: 3px solid var(--gold);
+      padding: 1.25rem 1.5rem;
+      background: var(--black-3);
+    }
+    .service-block h4 {
+      color: var(--gold);
+      font-family: var(--font-head);
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+    .service-block h3 {
+      color: var(--white);
+      font-size: 1.15rem;
+      margin-bottom: 0.6rem;
+    }
+    .service-block p {
+      color: var(--text);
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="Custom Wall Pro — Home">
+      <img src="logo.png?v=2" alt="Custom Wall Pro" class="nav-logo-img">
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="garage-doors.html">Garage Doors</a>
+      <a href="walls-murals.html">Walls &amp; Murals</a>
+      <a href="commercial.html">Commercial</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a href="quote.html" class="btn btn-gold nav-cta">Get a Quote</a>
+  </div>
+</nav>
+<div class="nav-drawer" id="navDrawer" aria-label="Mobile menu">
+  <a href="index.html">Home</a>
+  <a href="garage-doors.html">Garage Doors</a>
+  <a href="walls-murals.html">Walls &amp; Murals</a>
+  <a href="commercial.html">Commercial</a>
+  <a href="contact.html">Contact</a>
+  <a href="quote.html" class="btn btn-gold">Get a Free Quote</a>
+</div>
+
+<!-- ── PAGE HERO ── -->
+<section class="page-hero" aria-labelledby="page-heading">
+  <div class="container">
+    <span class="eyebrow">Industrial &amp; Commercial</span>
+    <h1 id="page-heading">Built for<br><span class="text-gold">Working Facilities</span></h1>
+    <p class="hero-sub" style="margin-top:1.25rem;max-width:600px;">
+      Safety graphics, wayfinding systems, branded installations, and large-format murals
+      built to survive mining sites, production floors, and high-traffic commercial spaces.
+      On-site UV printing &mdash; no panels to hang, no disruption to your operation.
+    </p>
+    <div style="margin-top:2.5rem;display:flex;flex-wrap:wrap;gap:1rem;">
+      <a href="quote.html" class="btn btn-gold btn-lg">Commercial Inquiries</a>
+      <a href="contact.html" class="btn btn-outline btn-lg">Talk to Our Team</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── INDUSTRIES ── -->
+<section class="section--sm bg-dark-2" aria-labelledby="industries-heading">
+  <div class="container">
+    <span class="eyebrow">Industries We Serve</span>
+    <h2 id="industries-heading" style="margin-bottom:2rem;">Who We Work With</h2>
+    <div class="industry-grid" role="list">
+      <div class="industry-cell" role="listitem">
+        <span class="ind-icon" aria-hidden="true">&#9968;</span>
+        <h4>Mining &amp; Resources</h4>
+        <p>Safety zones, equipment labels, high-visibility markings for remote and industrial sites.</p>
+      </div>
+      <div class="industry-cell" role="listitem">
+        <span class="ind-icon" aria-hidden="true">&#127981;</span>
+        <h4>Mills &amp; Production</h4>
+        <p>Floor markings, process diagrams, directional wayfinding, and equipment zone identification.</p>
+      </div>
+      <div class="industry-cell" role="listitem">
+        <span class="ind-icon" aria-hidden="true">&#127970;</span>
+        <h4>Corporate Offices</h4>
+        <p>Brand walls, lobby murals, values and mission statement graphics, reception area features.</p>
+      </div>
+      <div class="industry-cell" role="listitem">
+        <span class="ind-icon" aria-hidden="true">&#128736;</span>
+        <h4>Facilities &amp; Warehouses</h4>
+        <p>Large-scale safety signage, dock markings, bay labelling, and branded environmental graphics.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SERVICES ── -->
+<section class="section bg-dark" aria-labelledby="services-heading">
+  <div class="container">
+    <span class="eyebrow">What We Deliver</span>
+    <h2 id="services-heading" style="margin-bottom:0.75rem;">Commercial Services</h2>
+    <p style="color:var(--muted);margin-bottom:2.5rem;max-width:520px;">
+      Every application is printed on-site &mdash; direct to the wall, door, or surface &mdash;
+      with no panels to fabricate and install, and no shop drop-off required.
+    </p>
+    <div class="service-list" role="list">
+      <div class="service-block" role="listitem">
+        <h4>Safety &amp; Compliance</h4>
+        <h3>Safety &amp; Compliance Graphics</h3>
+        <p>WHMIS zones, PPE requirement notices, emergency procedure panels, and high-visibility
+          hazard markings printed to last in demanding environments.</p>
+      </div>
+      <div class="service-block" role="listitem">
+        <h4>Navigation</h4>
+        <h3>Wayfinding &amp; Zone Systems</h3>
+        <p>Numbered zones, directional arrows, department labels, and colour-coded areas
+          for facilities of any size. Clear, permanent, and on-brand.</p>
+      </div>
+      <div class="service-block" role="listitem">
+        <h4>Brand Environment</h4>
+        <h3>Branded Installations</h3>
+        <p>Company logos, mission statements, values walls, and team graphics for lobbies,
+          boardrooms, and public-facing spaces. Built to impress clients and inspire staff.</p>
+      </div>
+      <div class="service-block" role="listitem">
+        <h4>Large Format</h4>
+        <h3>Large-Format Murals</h3>
+        <p>Floor-to-ceiling photographic murals, abstract feature walls, and heritage graphics
+          for spaces that demand something more than a poster.</p>
+      </div>
+      <div class="service-block" role="listitem">
+        <h4>Equipment &amp; Doors</h4>
+        <h3>Door &amp; Equipment Graphics</h3>
+        <p>ID labels, operational markings, and custom graphics on facility doors,
+          rollup doors, and equipment enclosures. Same UV durability as our residential work.</p>
+      </div>
+      <div class="service-block" role="listitem">
+        <h4>Multi-Site</h4>
+        <h3>Multi-Location Projects</h3>
+        <p>We can coordinate large rollouts across multiple facilities. Consistent branding,
+          single point of contact, and coordinated scheduling across Metro Vancouver.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── WHY US ── -->
+<section class="section bg-black" aria-labelledby="why-heading">
+  <div class="container">
+    <div class="two-col">
+      <div>
+        <span class="eyebrow">Why Custom Wall Pro</span>
+        <h2 id="why-heading">We Print On-Site.<br><span class="text-gold">You Stay Operational.</span></h2>
+        <div class="gold-rule"></div>
+        <p style="margin-bottom:2rem;">
+          Traditional signage means fabricating panels offsite, then coordinating delivery
+          and installation. That&rsquo;s two crews, two schedules, and weeks of lead time.
+          We print directly on your surfaces &mdash; one visit, one crew, one day.
+        </p>
+        <div class="feature-list" role="list">
+          <div class="feature-item" role="listitem">
+            <div class="feature-icon" aria-hidden="true">&#9670;</div>
+            <div class="feature-text">
+              <h4>No Disruption to Operations</h4>
+              <p>We work around your schedule. No extended facility shutdowns, no scaffolding crews, no multi-week installations.</p>
+            </div>
+          </div>
+          <div class="feature-item" role="listitem">
+            <div class="feature-icon" aria-hidden="true">&#9670;</div>
+            <div class="feature-text">
+              <h4>Durable in Harsh Environments</h4>
+              <p>UV-cured ink handles chemical exposure, temperature swings, and industrial cleaning. Built for where you actually work.</p>
+            </div>
+          </div>
+          <div class="feature-item" role="listitem">
+            <div class="feature-icon" aria-hidden="true">&#9670;</div>
+            <div class="feature-text">
+              <h4>Local. Accountable.</h4>
+              <p>We&rsquo;re based in Cloverdale &mdash; not a national franchise. Direct contact, direct accountability, and someone who actually shows up.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="two-col-img">
+        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80" alt="Large industrial warehouse facility interior" loading="lazy">
+        <div style="margin-top:1rem;background:var(--black-3);border:1px solid var(--border);border-left:3px solid var(--gold);padding:1.25rem;">
+          <p style="font-family:var(--font-head);font-size:0.8rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;">Project Scoping</p>
+          <p style="font-size:0.9rem;color:var(--text);">
+            Commercial jobs vary widely in scope. We&rsquo;ll visit your facility, assess the surfaces,
+            and provide a detailed quote before any commitment.
+            <a href="quote.html" style="color:var(--gold);"> Start here &rarr;</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA ── -->
+<section class="callout-strip" aria-label="Call to action">
+  <div class="container">
+    <h2>Your Facility. Your Brand. Done Right.</h2>
+    <p>On-site UV printing for commercial and industrial spaces across Metro Vancouver.</p>
+    <a href="quote.html" class="btn btn-white btn-lg">Start a Commercial Inquiry</a>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo" aria-label="Custom Wall Pro">
+          <img src="logo.png?v=2" alt="Custom Wall Pro" class="nav-logo-img nav-logo-img--sm">
+        </a>
+        <p>Direct-to-surface UV printing for garage doors, walls, and commercial spaces. Based in Cloverdale, BC.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="garage-doors.html">Garage Doors</a></li>
+          <li><a href="walls-murals.html">Walls &amp; Murals</a></li>
+          <li><a href="commercial.html">Commercial</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="quote.html">Get a Quote</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>Custom Wall Pro &copy; 2026</span>
+      <span class="footer-badge">Surrey &amp; Metro Vancouver</span>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
