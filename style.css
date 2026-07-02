@@ -141,7 +141,7 @@ p  { font-size: clamp(0.95rem, 1.5vw, 1.05rem); }
   flex-shrink: 0;
 }
 .nav-logo img {
-  height: 44px;
+  height: 66px;
   width: auto;
   display: block;
 }
@@ -152,7 +152,7 @@ p  { font-size: clamp(0.95rem, 1.5vw, 1.05rem); }
 }
 .nav-logo-img {
   display: block;
-  height: 44px;
+  height: 66px;
   width: auto;
 }
 .nav-logo-img--sm {
