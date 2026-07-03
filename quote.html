@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Get a free quote for custom UV printing — garage doors, walls, murals, and commercial. Custom Wall Pro, Cloverdale BC.">
-  <title>Get a Free Quote | Custom Wall Pro</title>
+  <meta name="description" content="Request a quote for custom UV printing — garage doors, walls, murals, and commercial. $200 quote fee, credited to your job cost if you move forward. Custom Wall Pro, Cloverdale BC.">
+  <title>Get a Quote | Custom Wall Pro</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap">
@@ -126,6 +126,51 @@
       font-weight: 700;
       flex-shrink: 0;
     }
+
+    .fee-note {
+      background: var(--black-3);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--gold);
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 1.75rem;
+    }
+    .fee-note h4 {
+      color: var(--gold);
+      font-family: var(--font-head);
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+    .fee-note p {
+      font-size: 0.9rem;
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .deposit-box {
+      margin-top: 2rem;
+      background: var(--black-3);
+      border: 1px solid var(--border);
+      border-top: 3px solid var(--gold);
+      padding: clamp(1.5rem, 4vw, 2rem);
+      text-align: center;
+    }
+    .deposit-box h3 {
+      font-size: 1.05rem;
+      color: var(--white);
+      margin-bottom: 0.5rem;
+    }
+    .deposit-box p {
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-bottom: 1.25rem;
+    }
+    .deposit-box .btn {
+      width: 100%;
+      text-align: center;
+      padding-block: 1.1em;
+    }
   </style>
 </head>
 <body>
@@ -142,12 +187,22 @@
 <main class="quote-wrap" id="main-content">
   <div class="quote-inner">
 
-    <div class="quote-badge">Free &mdash; No Obligation</div>
-    <h1>Get Your<br><span class="text-gold">Free Quote</span></h1>
+    <div class="quote-badge">$200 Quote Fee &mdash; Credited to Your Job</div>
+    <h1>Get Your<br><span class="text-gold">Quote</span></h1>
     <p class="sub">
       Tell us about your project. We&rsquo;ll get back to you within one business day.
       No spam, no pressure &mdash; just a straight answer and a price.
     </p>
+
+    <div class="fee-note">
+      <h4>How the Quote Fee Works</h4>
+      <p>
+        A quote visit costs $200. We come to your site, assess the job, and put together an accurate,
+        detailed price. If you accept the quote and move forward with the job, the full $200 is credited
+        toward your total cost &mdash; you never pay twice. If you decide not to proceed, the $200 covers
+        our time and travel.
+      </p>
+    </div>
 
     <form class="quote-form" id="quoteForm" novalidate aria-label="Quote request form">
       <div class="form-group">
@@ -179,6 +234,16 @@
       <button type="submit" class="btn btn-gold">Send My Quote Request</button>
     </form>
 
+    <div class="deposit-box">
+      <h3>Ready to Book Your Quote Visit?</h3>
+      <p>
+        Already know you want to move forward? Pay your $200 quote fee now and we&rsquo;ll get your visit
+        scheduled right away. Credited in full toward your job cost if you accept.
+      </p>
+      <!-- TODO: Replace href="#" with your real Stripe Payment Link once you've created one -->
+      <a href="#" class="btn btn-outline">Pay $200 Deposit</a>
+    </div>
+
     <div class="call-line">
       Prefer to call?
       <a href="tel:+12504863409">
@@ -190,7 +255,7 @@
     </div>
 
     <ul class="trust-points" aria-label="Why quote with us">
-      <li class="trust-point">No obligation, no hard sell</li>
+      <li class="trust-point">$200 credited to your job if you proceed</li>
       <li class="trust-point">Reply within one business day</li>
       <li class="trust-point">We come to you &mdash; on-site printing</li>
       <li class="trust-point">Most jobs done in a single day</li>
