@@ -44,8 +44,7 @@
   const quoteForm = document.getElementById('quoteForm');
   if (quoteForm) {
     const STRIPE_QUOTE_LINK = 'https://buy.stripe.com/aFa00i5TH1MY1xQ6fE6EU00';
-    /* TODO: replace with your real Formspree form endpoint (formspree.io → New Form). */
-    const FORMSPREE_ENDPOINT = 'https://formspree.io/f/REPLACE_ME';
+    const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xvzjlove';
 
     quoteForm.addEventListener('submit', function (e) {
       e.preventDefault();
