@@ -48,7 +48,8 @@
   const CONV = {
     quote:   ADS_ID + '/dLH-CIvzhoYdEMus8bNE', // Quote form submitted (Formspree accepted)
     contact: ADS_ID + '/6gCACMzKiokdEMus8bNE', // Contact form submitted (Formspree accepted)
-    call:    ADS_ID + '/DNVsCJHzhoYdEMus8bNE'  // Call button tap (tel: link)
+    call:    ADS_ID + '/DNVsCJHzhoYdEMus8bNE', // Call button tap (tel: link)
+    messenger: ADS_ID + '/IBI9CNq2mYkdEMus8bNE' // Messenger chat tap (m.me link)
     // $200 quote paid is fired from quote-confirmed.html only
   };
   const hasGtag = function () { return typeof window.gtag === 'function'; };
@@ -64,12 +65,36 @@
     setTimeout(finish, 1100);
   }
 
-  /* ── Phone taps: one conversion per page view; email taps: GA4 only ── */
-  let callTracked = false;
+  /* ── Floating "Message us" button → Custom Wall Pro Messenger ── */
+  const MESSENGER_URL = 'https://m.me/1220423157828732';
+  if (!document.querySelector('.msgr-fab')) {
+    const css = document.createElement('style');
+    css.textContent = '.msgr-fab{position:fixed;right:16px;bottom:16px;z-index:999;display:inline-flex;align-items:center;gap:.5rem;' +
+      'padding:.8rem 1.1rem;border-radius:999px;background:#0866ff;color:#fff !important;font:600 .95rem/1 Inter,system-ui,sans-serif;' +
+      'text-decoration:none;box-shadow:0 6px 20px rgba(0,0,0,.35)}.msgr-fab:hover{background:#0654d6}' +
+      '.msgr-fab svg{width:20px;height:20px;fill:#fff}';
+    document.head.appendChild(css);
+    const fab = document.createElement('a');
+    fab.className = 'msgr-fab';
+    fab.href = MESSENGER_URL;
+    fab.target = '_blank';
+    fab.rel = 'noopener';
+    fab.setAttribute('aria-label', 'Message Custom Wall Pro on Messenger');
+    fab.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.36 2 2 6.13 2 11.7c0 2.91 1.19 5.44 3.14 7.17.16.14.26.35.27.57l.05 1.78a.8.8 0 0 0 1.12.71l1.98-.87a.8.8 0 0 1 .53-.04c.91.25 1.87.38 2.91.38 5.64 0 10-4.13 10-9.7S17.64 2 12 2zm6 7.46-2.94 4.66a1.5 1.5 0 0 1-2.17.4l-2.34-1.75a.6.6 0 0 0-.72 0l-3.16 2.4c-.42.32-.97-.18-.69-.63l2.94-4.66a1.5 1.5 0 0 1 2.17-.4l2.34 1.75a.6.6 0 0 0 .72 0l3.16-2.4c.42-.32.97.18.69.63z"/></svg><span>Message us</span>';
+    document.body.appendChild(fab);
+  }
+
+  /* ── Messenger taps / phone taps: one conversion each per page view;
+        email taps: GA4 only ── */
+  let callTracked = false, messengerTracked = false;
   document.addEventListener('click', function (e) {
-    const a = e.target.closest && e.target.closest('a[href^="tel:"], a[href^="mailto:"]');
+    const a = e.target.closest && e.target.closest('a[href^="tel:"], a[href^="mailto:"], a[href*="m.me/"]');
     if (!a) return;
-    if (a.getAttribute('href').indexOf('tel:') === 0) {
+    if (a.getAttribute('href').indexOf('m.me/') !== -1) {
+      if (messengerTracked) return;
+      messengerTracked = true;
+      trackConversion(CONV.messenger, 'messenger_click', { page: page });
+    } else if (a.getAttribute('href').indexOf('tel:') === 0) {
       if (callTracked) return;
       callTracked = true;
       trackConversion(CONV.call, 'click_to_call', { link_url: a.getAttribute('href'), page: page });
