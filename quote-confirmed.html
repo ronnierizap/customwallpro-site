@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <script>
+    /* Stripe redirects here after a successful $200 payment with
+       ?session_id={CHECKOUT_SESSION_ID}. Capture it, then strip it from the
+       URL BEFORE the Google tag reads the page location. */
+    (function () {
+      var m = /[?&]session_id=([^&#]+)/.exec(location.search);
+      window.__cwpStripeSession = m ? decodeURIComponent(m[1]) : '';
+      if (m && history.replaceState) history.replaceState(null, '', location.pathname);
+    })();
+  </script>
+  <!-- Google tag (gtag.js): GA4 G-97DSR2QK1N + Google Ads AW-18362422859. Installed once, here only. -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-97DSR2QK1N"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-97DSR2QK1N');
+    gtag('config', 'AW-18362422859');
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Your $200 quote fee payment was received. Custom Wall Pro will contact you to schedule your quote visit.">
+  <title>Payment Received | Custom Wall Pro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .page-hero {
+      padding-block: clamp(3.5rem, 7vw, 6rem);
+      background: var(--black);
+      position: relative;
+      overflow: hidden;
+    }
+    .page-hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 4px; height: 100%;
+      background: var(--gold);
+    }
+    .page-hero .container { position: relative; z-index: 2; }
+
+    .contact-grid {
+      display: grid;
+      gap: clamp(2.5rem, 5vw, 4rem);
+      align-items: start;
+    }
+    @media (min-width: 768px) {
+      .contact-grid { grid-template-columns: 1fr 1.4fr; }
+    }
+
+    .contact-info { display: flex; flex-direction: column; gap: 2rem; }
+    .info-block {}
+    .info-block h4 {
+      font-family: var(--font-head);
+      font-size: 0.75rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.6rem;
+      font-weight: 600;
+    }
+    .info-block p, .info-block a {
+      color: var(--text);
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+    .info-block a { color: var(--gold); transition: color 0.15s; }
+    .info-block a:hover { color: var(--gold-l); }
+    .info-block .big-phone {
+      font-family: var(--font-head);
+      font-size: clamp(1.5rem, 4vw, 2rem);
+      color: var(--white);
+      letter-spacing: 0.02em;
+    }
+
+    .area-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+    }
+    .area-chip {
+      font-family: var(--font-head);
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.3em 0.75em;
+      border: 1px solid var(--border);
+      color: var(--muted);
+    }
+
+    .contact-form-wrap {
+      background: var(--black-3);
+      border: 1px solid var(--border);
+      border-top: 3px solid var(--gold);
+      padding: clamp(1.75rem, 4vw, 2.5rem);
+    }
+    .contact-form-wrap h3 {
+      font-size: 1.3rem;
+      color: var(--white);
+      margin-bottom: 1.75rem;
+    }
+    .contact-form-wrap .btn {
+      width: 100%;
+      text-align: center;
+      padding-block: 1em;
+    }
+
+    .hours-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.6em 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.9rem;
+    }
+    .hours-row:last-child { border-bottom: none; }
+    .hours-row .day { color: var(--muted); }
+    .hours-row .time { color: var(--text); font-weight: 500; }
+  </style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="Custom Wall Pro — Home">
+      <img src="logo_clean.png" alt="Custom Wall Pro" class="nav-logo-img">
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="garage-doors.html">Garage Doors</a>
+      <a href="walls-murals.html">Walls &amp; Murals</a>
+      <a href="commercial.html">Commercial</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a href="quote.html" class="btn btn-gold nav-cta">Get a Quote</a>
+  </div>
+</nav>
+<div class="nav-drawer" id="navDrawer" aria-label="Mobile menu">
+  <a href="index.html">Home</a>
+  <a href="garage-doors.html">Garage Doors</a>
+  <a href="walls-murals.html">Walls &amp; Murals</a>
+  <a href="commercial.html">Commercial</a>
+  <a href="contact.html">Contact</a>
+  <a href="quote.html" class="btn btn-gold">Get a Quote</a>
+</div>
+
+<!-- ── PAGE HERO ── -->
+<section class="page-hero" aria-labelledby="page-heading">
+  <div class="container">
+    <span class="eyebrow">Payment Received</span>
+    <h1 id="page-heading">You&rsquo;re <span class="text-gold">Booked In</span></h1>
+    <p class="hero-sub" style="margin-top:1rem;max-width:560px;">
+      Thanks &mdash; your $200 quote fee went through. Ron will reach out within one business day to
+      schedule your quote visit. The full $200 is credited toward your job if you move forward.
+    </p>
+    <p class="hero-sub" style="margin-top:1rem;max-width:560px;">
+      Questions in the meantime? Call or text <a href="tel:+12504863409" class="text-gold">(250) 486-3409</a>.
+    </p>
+    <a href="index.html" class="btn btn-gold" style="margin-top:1.5rem;">Back to Home</a>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo" aria-label="Custom Wall Pro">
+          <img src="logo_clean.png" alt="Custom Wall Pro" class="nav-logo-img nav-logo-img--sm">
+        </a>
+        <p>Direct-to-surface UV printing for garage doors, walls, and commercial spaces. Based in Cloverdale, BC.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="garage-doors.html">Garage Doors</a></li>
+          <li><a href="walls-murals.html">Walls &amp; Murals</a></li>
+          <li><a href="commercial.html">Commercial</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="quote.html">Get a Quote</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>Custom Wall Pro &copy; 2026</span>
+      <span class="footer-badge">Surrey &amp; Metro Vancouver</span>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+<script>
+  /* $200 quote paid — fires ONLY when Stripe sent the visitor here with a
+     live Checkout Session id, and only once per session id (reloads, back
+     button and shared links never re-count). transaction_id also lets Google
+     Ads de-duplicate server-side. */
+  (function () {
+    var sid = window.__cwpStripeSession || '';
+    if (!/^cs_live_[A-Za-z0-9]+$/.test(sid) || typeof window.gtag !== 'function') return;
+    var KEY = 'cwp_paid_sessions', seen = [];
+    try { seen = JSON.parse(localStorage.getItem(KEY) || '[]'); } catch (e) {}
+    if (seen.indexOf(sid) !== -1) return;
+    gtag('event', 'conversion', {
+      send_to: 'AW-18362422859/lI5tCI7zhoYdEMus8bNE',
+      value: 200.0, currency: 'CAD', transaction_id: sid
+    });
+    gtag('event', 'purchase', {
+      send_to: 'G-97DSR2QK1N', transaction_id: sid, value: 200.0, currency: 'CAD',
+      items: [{ item_id: 'quote-fee', item_name: '$200 Quote Fee', price: 200.0, quantity: 1 }]
+    });
+    try { seen.push(sid); localStorage.setItem(KEY, JSON.stringify(seen.slice(-20))); } catch (e) {}
+  })();
+</script>
+</body>
+</html>

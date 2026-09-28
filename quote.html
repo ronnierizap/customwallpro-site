@@ -2,6 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <!-- Google tag (gtag.js): GA4 G-97DSR2QK1N + Google Ads AW-18362422859. Installed once, here only. -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-97DSR2QK1N"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-97DSR2QK1N');
+    gtag('config', 'AW-18362422859');
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Request a quote for custom UV printing — garage doors, walls, murals, and commercial. $200 quote fee, credited to your job cost if you move forward. Custom Wall Pro, Cloverdale BC.">
   <title>Get a Quote | Custom Wall Pro</title>
@@ -205,6 +214,7 @@
     </div>
 
     <form class="quote-form" id="quoteForm" action="https://formspree.io/f/xvzjlove" method="POST" novalidate aria-label="Quote request form">
+      <input type="hidden" name="form_type" value="quote">
       <div class="form-group">
         <label for="q-name">Your Name <span aria-hidden="true" style="color:var(--gold);">*</span></label>
         <input type="text" id="q-name" name="name" placeholder="Ron Woodward" required autocomplete="name">
